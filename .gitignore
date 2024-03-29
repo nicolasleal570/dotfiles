@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+tmux/plugins/
+raycast
+yarn
+gh
+firebase
+configstore
