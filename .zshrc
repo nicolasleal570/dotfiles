@@ -184,7 +184,7 @@ esac
 # pnpm end
 
 # zoxide configuration
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
