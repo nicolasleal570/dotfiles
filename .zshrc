@@ -97,7 +97,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+plugins=(poetry)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -190,3 +190,20 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(fzf --zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# bun completions
+[ -s "/Users/nicolasleal570/.bun/_bun" ] && source "/Users/nicolasleal570/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# Created by `pipx` on 2024-05-23 22:37:12
+export PATH="$PATH:/Users/nicolasleal570/.local/bin"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
