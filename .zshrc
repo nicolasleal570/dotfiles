@@ -189,7 +189,6 @@ eval "$(zoxide init --cmd cd zsh)"
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
-PATH=~/.console-ninja/.bin:$PATH
 
 # bun completions
 [ -s "/Users/nicolasleal570/.bun/_bun" ] && source "/Users/nicolasleal570/.bun/_bun"
@@ -207,3 +206,6 @@ export PATH="$PATH:/Users/nicolasleal570/.local/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
