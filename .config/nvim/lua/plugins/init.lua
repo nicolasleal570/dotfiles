@@ -24,6 +24,7 @@ return {
         "html-lsp",
         "css-lsp",
         "prettier",
+        "rust-analyzer",
       },
     },
   },
@@ -54,6 +55,14 @@ return {
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "nvimtree")
       require("nvim-tree").setup(opts)
+    end,
+  },
+
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
     end,
   },
 }
